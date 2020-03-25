@@ -1,0 +1,40 @@
+{
+  "connection": "default",
+  "collectionName": "servicechildpages",
+  "info": {
+    "name": "servicechildpage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "Name": {
+      "required": true,
+      "type": "string"
+    },
+    "Title": {
+      "required": true,
+      "type": "string"
+    },
+    "Description": {
+      "required": true,
+      "type": "text"
+    },
+    "Keyword": {
+      "required": true,
+      "type": "string"
+    },
+    "DisplayInMenu": {
+      "required": true,
+      "default": true,
+      "type": "boolean"
+    },
+    "servicepage": {
+      "model": "servicepage",
+      "via": "servicechildpages"
+    }
+  }
+}

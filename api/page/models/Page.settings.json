@@ -1,0 +1,53 @@
+{
+  "connection": "default",
+  "collectionName": "pages",
+  "info": {
+    "name": "page",
+    "description": "Page listing"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "required": true,
+      "type": "text"
+    },
+    "Keywords": {
+      "required": true,
+      "type": "string"
+    },
+    "ParentPage": {
+      "required": true,
+      "enum": [
+        "None Specified",
+        "About",
+        "Services",
+        "Blogs",
+        "Careers",
+        "Internships"
+      ],
+      "type": "enumeration",
+      "default": "None Specified"
+    },
+    "DisplayInMenu": {
+      "required": true,
+      "default": true,
+      "type": "boolean"
+    },
+    "servicepages": {
+      "collection": "servicepage",
+      "via": "page"
+    }
+  }
+}

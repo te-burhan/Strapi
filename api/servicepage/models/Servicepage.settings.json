@@ -1,0 +1,56 @@
+{
+  "connection": "default",
+  "collectionName": "servicepages",
+  "info": {
+    "name": "servicepage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "Name": {
+      "required": true,
+      "type": "string"
+    },
+    "Title": {
+      "required": true,
+      "type": "string"
+    },
+    "Description": {
+      "required": true,
+      "type": "text"
+    },
+    "Keyword": {
+      "required": true,
+      "type": "string"
+    },
+    "ParentPage": {
+      "required": true,
+      "enum": [
+        "About",
+        "Services",
+        "Blogs",
+        "Careers",
+        "Internship"
+      ],
+      "default": "None Specified",
+      "type": "enumeration"
+    },
+    "DisplayInMenu": {
+      "required": true,
+      "default": true,
+      "type": "boolean"
+    },
+    "page": {
+      "model": "page",
+      "via": "servicepages"
+    },
+    "servicechildpages": {
+      "collection": "servicechildpage",
+      "via": "servicepage"
+    }
+  }
+}

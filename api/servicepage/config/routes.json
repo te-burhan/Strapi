@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/servicepages",
+      "handler": "Servicepage.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/servicepages/count",
+      "handler": "Servicepage.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/servicepages/:id",
+      "handler": "Servicepage.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/servicepages",
+      "handler": "Servicepage.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/servicepages/:id",
+      "handler": "Servicepage.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/servicepages/:id",
+      "handler": "Servicepage.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
